@@ -21,14 +21,14 @@ anakbuah(X, Y) :- ankbuah(Y, X).
 % -----------------------------------------------------------------
 % 3. SEMUA YANG ADA DI BAWAH KENDALI (REKURSIF)
 % -----------------------------------------------------------------
-kekuasaannya(Bos, Anak) :- ankbuah(Bos, Anak).
-kekuasaannya(Bos, Anak) :- ankbuah(Bos, X), kekuasaannya(X, Anak).
+kekuasaannya(Bos, Karyawan) :- ankbuah(Bos, Karyawan).
+kekuasaannya(Bos, Karyawan) :- ankbuah(Bos, X), kekuasaannya(X, Karyawan).
 
 % -----------------------------------------------------------------
 % 4. SEMUA BOS DARI ATAS (REKURSIF)
 % -----------------------------------------------------------------
-rantai_komando(Anak, Bos) :- anakbuah(Anak, Bos).
-rantai_komando(Anak, Bos) :- anakbuah(Anak, X), rantai_komando(X, Bos).
+rantai_komando(Karyawan, Bos) :- anakbuah(Karyawan, Bos).
+rantai_komando(Karyawan, Bos) :- anakbuah(Karyawan, X), rantai_komando(X, Bos).
 
 
 % -----------------------------------------------------------------
@@ -231,4 +231,5 @@ kakek_nenek(KakekNenek, Cucu) :-
 
 % cucu(Cucu, KakekNenek) - kebalikan dari kakek_nenek
 cucu(Cucu, KakekNenek) :- kakek_nenek(KakekNenek, Cucu).
+
 
