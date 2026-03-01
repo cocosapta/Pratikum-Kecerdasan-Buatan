@@ -68,17 +68,16 @@ tampilkan_struktur :-
     write('========================================='), nl,
     write('        STRUKTUR ORGANISASI             '), nl,
     write('========================================='), nl, nl,
-    write('            adi'), nl,
-    write('             |'), nl,
-    write('          burhan'), nl,
-    write('         /  |  \\'), nl,
-    write('    bahrun bisrin ferdi'), nl,
-    write('     /    \\'), nl,
-    write('  fahri   farah'), nl, nl,
-    write('========================================='), nl,
-    write('========================================='), nl.
 
-% -----------------------------------------------------------------
+    write('                adi'), nl,
+    write('                 |'), nl,
+    write('               burhan'), nl,
+    write('              /      \\'), nl,
+    write('        bahrun      bisrin'), nl,
+    write('        /    \\         |'), nl,
+    write('   fahri   farah    ferdi'), nl, nl,
+
+    write('========================================='), nl.
 % -----------------------------------------------------------------
 % =================================================================
 % POHON KELUARGA - TUGAS 2
@@ -231,5 +230,6 @@ kakek_nenek(KakekNenek, Cucu) :-
 
 % cucu(Cucu, KakekNenek) - kebalikan dari kakek_nenek
 cucu(Cucu, KakekNenek) :- kakek_nenek(KakekNenek, Cucu).
+
 
 
