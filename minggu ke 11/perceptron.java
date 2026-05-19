@@ -50,7 +50,7 @@ public class perceptron {
         return result;
     }
     
-    // Kriteria berhenti dari PDF halaman 24
+    // Kriteria berhenti
     private boolean shouldStop(double[] oldWeights, double[] newWeights) {
         double[] yHat = toUnitVector(oldWeights);
         double[] wHat = toUnitVector(newWeights);
@@ -150,11 +150,10 @@ public class perceptron {
         
         System.out.println("\n\n");
         
-        // XOR - Demo bahwa tidak bisa (seperti disebut di PDF halaman 16)
+        // XOR - Demo 
         System.out.println("========================================");
         System.out.println("XOR GATE - Perceptron (Demontrasi Gagal)");
         System.out.println("========================================");
-        System.out.println("Seperti di PDF halaman 16:");
         System.out.println("XOR = (X1 AND NOT X2) OR (X2 AND NOT X1)");
         System.out.println("Tidak bisa dipisahkan dengan garis lurus!\n");
         
